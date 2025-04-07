@@ -33,50 +33,58 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
+Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+
+Developed by: SUBHASH.V
+RegisterNumber: 212224240163
+
+**2a**
 ~~~
-module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
-input A,B,C,D,W,X,Y,Z;
-wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
-output F1,F2;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign x6=(X)&(~Y)&(Z);
-assign x7=(~X)&(~Y)&(Z);
-assign x8=(~W)&(X)&(Y);
-assign x9=(W)&(~X)&(Y);
-assign x10=(W)&(X)&(Y);
-assign F1=x1|x2|x3|x4|x5;
-assign F2=x6|x7|x8|x9|x10;
+module ex2a(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~a&b&d)|(~b&~d)|(a&b&~c));
 endmodule
 ~~~
+**2b**
+~~~
+module ex2b(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y&z)|(x&y)|(w&y));
+endmodule
+~~~
+**Output**
 
-Developed by: JONATHAN RHENIUS S
-RegisterNumber: 212224050016
+**2a**
 
+![WhatsApp Image 2025-04-07 at 13 37 37_f6fbd456](https://github.com/user-attachments/assets/afb62b53-039a-4224-a156-5eb6b1e97b16)
 
-**RTL realization output:**
+**2b**
 
-![image](https://github.com/user-attachments/assets/09e7e8e8-7e37-4f27-ae23-766bf2b6ebb3)
+![WhatsApp Image 2025-04-07 at 13 37 38_a27026d8](https://github.com/user-attachments/assets/c4c0e693-103f-4f3c-a8d9-c1890fe268b0)
 
+**RTL realization**
 
-**Truth Table:**
+**2a**
 
-![image](https://github.com/user-attachments/assets/14ac81f5-ac73-4530-a7f1-cfe243324e78)
+![428376043-7e81e3d0-a02f-4866-9b21-e3848c789032](https://github.com/user-attachments/assets/dc7c5eb9-90c5-48f2-93bb-f6f47d1f1d3d)
 
-![image](https://github.com/user-attachments/assets/35cd0d2d-4fa8-454f-9206-5249a04199fd)
+**2b**
 
+![428376070-adf7c15e-9709-4f98-ae26-c38704af1e0b](https://github.com/user-attachments/assets/549837b3-336d-4aca-ba44-2d531db537c8)
 
-**Timing Diagram:**
+**RTL**
 
-![image](https://github.com/user-attachments/assets/223b7aaa-2365-4fb5-af53-b55b5a06a53b)
+**2a**
 
+![428376078-ecbdb491-3a4f-4b84-a880-7cc8be923b76](https://github.com/user-attachments/assets/bcf8bc32-2423-4b37-9d47-86e01d398fcb)
+
+**2b**
+
+![428376094-07b65b9a-c07e-4235-a1fc-336b87a9b8d4](https://github.com/user-attachments/assets/e5cf7e3b-0189-4aaf-8b16-1bd6f151e7c1)
 
 **Result:**
-
-The given logic functions are implemented using and their operations are verified using Verilog programming successfully.
 
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
 
